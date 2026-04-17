@@ -20,14 +20,16 @@ const ContactPage = () => {
         <div className="app">
             <Header />
             <main className="main-content">
-                <div className="login-container">
+                <div className="contact-container">
                     <h2>Contact Us</h2>
                     <p>Submit your feedback, concerns, or other inquiries below.</p>
-                    {submitted && (
-                        <p style={{ color: 'green', marginBottom: '1rem' }}>
-                            Thank you! Your message has been submitted.
-                        </p>
-                    )}
+                    <div aria-live="polite">
+                        {submitted && (
+                            <p style={{ color: 'green', marginBottom: '1rem' }}>
+                                Thank you! Your message has been submitted.
+                            </p>
+                        )}
+                    </div>
                     <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', maxWidth: 400 }}>
                         <input
                             type="text"
